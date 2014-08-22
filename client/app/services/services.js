@@ -1,7 +1,30 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
-  // Your code here
+  var getUserLinks = function(links) {
+    return $http({
+      method: 'GET',
+      url: '/api/links',
+      data: links
+    })
+    .then(function(resp) {
+      return resp.data;
+    });
+  };
+  var addNewLink = function(link) {
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      data: link
+    })
+    .then(function(resp) {
+      return resp.data;
+    });
+  };
+  return {
+    getUserLinks: getUserLinks,
+    addNewLink: addNewLink
+  };
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
@@ -44,7 +67,6 @@ angular.module('shortly.services', [])
     $window.localStorage.removeItem('com.shortly');
     $location.path('/signin');
   };
-
 
   return {
     signin: signin,

@@ -1,3 +1,21 @@
-<div id='container'>
-  <!-- Your html here -->
+<div class="navigation" ng-controller="AuthController">
+  <div class="navLinks">
+    <ul>
+      <li><a href="#/links">Your Links</a></li>
+      <li><a href="#/shorten">Shorten a Link</a></li>
+      <li class="logout" ng-click="logout()"><a href="#">Log Out</a></li>
+    </ul>
+  </div>
+</div>
+<div id='container' ng-controller="LinksController" ng-init="getLinks()">
+  <input class="search" type="text" placeholder="Search for a link" ng-model="search">
+  <ul>
+    <li class="link" ng-repeat="link in data | filter:search">
+      <p class="original"> {{ link.url }} </p>
+      <a class="title" href="/api/links/{{link.code}}"> {{ link.code }} </a>
+      <div class="visits"><span class="count">Visits: {{ link.visits }} </span></div>
+    </li>
+  </ul>
+
+
 </div>

@@ -1,143 +1,202 @@
 body {
-  margin: 0;
-  margin-top: 10px;
+  margin: 0 auto;
+  padding: 0 auto;
   font-family: arial, sans-serif;
+  background-color: #0E8FC1;
 }
 
 a {
-  color: #333;
-  font-size: 14px;
   text-decoration: none;
 }
 
-h1 {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.navigation {
-  width: 100%;
+.header {
+  margin: 0 auto;
+  padding-top: 8px;
   height: 40px;
-  background-color: #eee;
+  width: 100%;
+  border-bottom: 2px solid black;
+  background-color: #C9C9C1;
+  color: white;
 }
 
-.navigation ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.logoBackground {
+  margin: 0 auto;
+  padding: 0 auto;
+  height: 32px;
+  width: 12%;
+  background-color: #0E8FC1;
+  border-radius: 5px;
 }
 
-.navigation li {
-  float: left;
-}
-
-.navigation li a {
-  width: 100px;
-  height: 20px;
-  line-height: 20px;
-  padding: 10px;
-  display: block;
+.logo {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-size: 28px;
+  font-style: italic;
   text-align: center;
 }
 
-.navigation li a:hover {
-  background-color: #ddd;
+#signin, #signup {
+  margin: 0 0 0 30%;
+  height: 115px;
+  width: 40%;
+  background-color: #F4D379;
+  border-radius: 5px;
+}
+
+#signin h2, #signup h2 {
+  padding: 0 0 0 1%;
+}
+
+#signin form, #signup form {
+  margin-bottom: 20px;
+}
+
+#signin a, #signup a {
+ margin-left: 2px;
+}
+
+.navigation {
+  height: 48px;
+  width: 100%;
+  border-bottom: 2px solid black;
+  background-color: #F4D379;
+}
+
+.navLinks {
+  margin-left: 30%;
+  width: 40%;
+}
+.navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  height: 100%;
+  width: 20%;
+  display: inline-block;
+  margin: 16px 0 0 0;
+  margin-right: 20%;
+  padding: 0;
+}
+
+.navigation li a {
+  height: 100%;
+}
+
+.navigation li:hover {
+  background-color: white;
 }
 
 .navigation li a.selected {
-  background-color: #ccc;
+
+}
+
+.navigation .logout {
+  width: 18%;
+  margin-right: 0%;
 }
 
 #container {
-  clear: both;
-  margin-top: 10px;
+
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.search {
+  margin: 10px 0 5px 0;
+  margin-left: 40%;
+  padding: 0;
+  height: 20px;
+  width: 20%;
+}
+
+#container ul {
+  -webkit-padding-start: 0;
+  list-style-type: none;
+  width: 40%;
+  margin: 0 0 0 30%;
+  padding: 0 auto;
 }
 
 .link {
-  clear: both;
-  margin-bottom: 5px;
-  padding: 5px;
-  min-height: 50px;
+  margin: 5px 0 5px 0;
+  padding: 0;
+  height: 50px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .link:hover {
-  background-color: #efe;
+  background-color: #CAC6BA;
 }
 
-.link img {
-  float: left;
-  margin: 0 5px;
+.link .visits, .count, .original {
+  display: inline-block;
+  margin-top: 16px;
 }
 
 .link .visits {
-  float: right;
-  margin-right: 10px;
-  margin-left: 20px;
+  margin: 0;
+  padding: 0 auto;
 }
 
 .link .visits .count {
-  font-size: 46px;
-  font-weight: 600;
+
 }
 
-.link .title {
-  font-weight: 600;
+.title:hover {
+  cursor: pointer;
+}
+
+.title {
+  margin-right: 20%;
 }
 
 .link .original {
-  color: #aaa;
-  font-size: 12px;
-}
-
-.link .info {
-  margin-left: 55px;
+  margin-left: 2%;
+  margin-right: 20%;
+  padding: 0;
 }
 
 form {
-  margin: 10px;
+
 }
 
-input {
-  width: 360px;
-  display: block;
-  font-size: 13px;
-  padding: 5px;
-  margin-bottom: 5px;
+.shortenInput {
+  margin-top: 20px;
+  margin-left: 40%;
+  height: 18px;
+  width: 20%;
 }
 
 input[type=url] {
-  display: inline
+
 }
 
 
 .error {
-  border: red solid 4px;
-  padding: 10px;
-  margin: 0 10px;
+
 }
 
 .clean {
-  border: #efe solid 2px;
-  padding: 10px;
-  margin: 0 10px;
+
 }
 
 .creator {
-  height: 50px;
+
 }
 
 .creator form {
-  float: left;
-  height: 80px;
+
 }
 
 .creator img.spinner {
-  height: 46px;
-  margin-bottom: 5px;
-  padding: 10px;
-  display: none;
+
 }
 
 .creator .message {
-  clear: both;
+
 }

@@ -1,6 +1,18 @@
-<div id='container'>
-<!-- Your code here -->
-
+<div class="navigation" ng-controller="AuthController">
+  <div class="navLinks">
+    <ul>
+      <li><a href="#/links">Your Links</a></li>
+      <li><a href="#/shorten">Shorten a Link</a></li>
+      <li class="logout" ng-click="logout()"><a href="#">Log Out</a></li>
+    </ul>
+  </div>
+</div>
+<div id='container' ng-controller="ShortenController">
+  <form name="urlName" ng-submit="addLink(links.url)">
+    <input class="shortenInput" type="text" value={{links.url}} ng-model="links.url" required ng-change="checkValidity(links.url)">
+    <button type="submit">Submit</button>
+    <p ng-if="invalid">Address must begin with "http://"</p>
+  </form>
 </div>
 
 
